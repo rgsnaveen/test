@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+
+  <ion-header class="main-title">
+    <ion-toolbar>
+      <ion-title>DIAGNAL APP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon color="vibrant" name="happy" role="img" class="icon ion-md-happy icon-space" aria-label="happy"></ion-icon>{{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,24 @@
+  
+ ================================================
+ 
+		DIAGNAL PROGRAMMING TEST 
+ 
+ ================================================
+ 
+ In this chapter, we are going to walk through the process of downloading Ionic and installing all necessary dependencies for development.
+ 
+ Things you need for installing ionic with windows
+ 
+  1) Node Js (Version: 8.11.3) you can download from https://nodejs.org/en/download/
+  
+  Install Ionic
+	Ionic comes with a convenient command line utility to start, build, and package Ionic apps.
+
+		To install it, simply run on command prompt:
+
+		npm install -g ionic
+  
+  
+ 
+ 
+ 

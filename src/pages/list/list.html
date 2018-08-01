@@ -1,0 +1,37 @@
+<ion-header>
+	<ion-navbar>
+		<ion-row>
+			<ion-col col-12 >
+				<button ion-button menuToggle item-left>
+					<ion-icon name="menu"></ion-icon>
+				</button>
+				<ion-title *ngIf="page" item-right class="list-page" >{{page.title}}
+			
+					<button ion-button (click)="onButtonClick()" class="searchBtn" item-right>
+						<span *ngIf="!buttonClicked" class="searchIcon"></span>
+						<span  *ngIf="buttonClicked"class="searchBackIcon"></span>
+					</button>
+				</ion-title>
+			</ion-col>
+		</ion-row>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-searchbar *ngIf="buttonClicked"(ionInput)="getItems($event)" (ionClear)="onCancel($event)" class="search-box"></ion-searchbar>
+	<ion-grid>
+		<ion-row *ngIf="videos && videos.length>0">
+			<ion-col col-4 *ngFor="let video of videos;let i=index" (click)="itemTapped($event, video)" class="video-details">
+				<div class="item-note" item-right>
+					<img src="../assets/imgs/{{video['poster-image']}}" onError="src = '../assets/imgs/placeholder_for_missing_posters.png'" />
+					<p class="video-name">{{video.name}} {{i}}</p>
+				</div>
+			</ion-col>
+			<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+				<ion-infinite-scroll-content></ion-infinite-scroll-content>
+			</ion-infinite-scroll>
+		</ion-row>
+		<ion-row *ngIf="videos && videos.length == 0">
+			<ion-col col-12>No Records Found</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

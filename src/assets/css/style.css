@@ -1,0 +1,128 @@
+@font-face {
+	font-family: TitilliumWeb;
+	src: url(../assets/fonts/TitilliumWeb-Regular.ttf) format("ttf");
+	font-weight: 200
+}
+
+ion-app {
+	font-family: TitilliumWeb !important;
+}
+
+.main-title .toolbar-background {
+	background: #f7b800;
+}
+
+.main-title .toolbar-title {
+	text-align: center;
+	color: #FFF;
+}
+
+.menu-inner .content {
+	background: #ffe687;
+}
+
+.content {
+	background: url('../imgs/search.png') repeat;
+	background: #171717;
+	color: #FFF;
+}
+
+.toolbar-background {
+	background: url('../imgs/nav_bar.png') repeat;
+}
+
+ion-menu .item {
+	background: #171717;
+	color: #FFF;
+}
+
+.searchBtn {
+	float: right;
+	background: none;
+	height: auto;
+}
+
+.searchBtn:hover {
+	background: none!important;
+}
+
+.searchIcon {
+	background: url('../imgs/search.png') no-repeat;
+	padding: 25px;
+}
+
+.searchBackIcon {
+	background: url('../imgs/Back.png') no-repeat;
+	padding: 25px;
+}
+
+.toolbar-title,
+.back-button.show-back-button,
+.back-button.show-back-button:hover {
+	color: #FFF;
+}
+
+.icon-space {
+	margin-right: 10px;
+}
+
+.search-box {
+	position: fixed;
+	z-index: 9;
+	margin-top: 15px;
+}
+
+.list-page .toolbar-title {
+	line-height: 50px;
+}
+
+.video-details:hover img,
+.video-details:focus img,
+.video-details:active img {
+	animation-iteration-count: infinite;
+	animation: shake 0.5s;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+.video-name {
+	width: 90%;
+	overflow: hidden;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
